@@ -1,0 +1,11 @@
+model: pop_sage
+hidden: 64
+n_layers: 2
+K: 3
+heads: 4
+dropout: 0.5
+lr: 0.005
+weight_decay: 0.0005
+epochs: 300
+min_epochs: 30
+patience: 50

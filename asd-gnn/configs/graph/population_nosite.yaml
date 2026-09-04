@@ -1,0 +1,7 @@
+graph_mode: population
+sim_metric: correlation
+pheno_terms: [sex, age]
+age_tol: 2.0
+knn: 10
+reduce: anova
+reduce_k: 2000

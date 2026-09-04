@@ -1,0 +1,9 @@
+# @package _global_
+# M13: does harmonisation close the k-fold/LOSO gap?
+hydra:
+  mode: MULTIRUN
+  sweeper:
+    params:
+      model: svm,gat
+      harmonize: none,combat
+      protocol: kfold,loso

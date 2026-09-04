@@ -1,0 +1,4 @@
+model: mlp
+hidden: [64]
+alpha: 0.001
+select_k: 2000

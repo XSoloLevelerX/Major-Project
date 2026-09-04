@@ -1,0 +1,2 @@
+protocol: abide2
+note: external validation, train on all ABIDE-I and test on ABIDE-II

@@ -1,0 +1,6 @@
+model: braincnn
+dropout: 0.5
+lr: 0.001
+weight_decay: 0.0005
+epochs: 100
+batch_size: 32

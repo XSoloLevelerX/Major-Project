@@ -1,0 +1,6 @@
+graph_mode: brain
+edge_strategy: knn
+edge_param: 10
+use_abs: true
+node_feature: profile
+self_loops: false

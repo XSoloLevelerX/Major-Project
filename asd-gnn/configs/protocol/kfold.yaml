@@ -1,0 +1,3 @@
+protocol: kfold
+n_splits: 10
+n_seeds: 5

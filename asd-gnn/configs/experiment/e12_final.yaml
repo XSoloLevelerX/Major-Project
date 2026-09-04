@@ -1,0 +1,8 @@
+# @package _global_
+# Headline configuration reported in the paper.
+model: gat
+data: cc200
+conn: tangent
+graph: brain_topk
+protocol: loso
+n_seeds: 5

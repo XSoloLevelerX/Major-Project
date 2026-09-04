@@ -1,0 +1,23 @@
+name: asdgnn
+channels: [pytorch, nvidia, conda-forge]
+dependencies:
+  - python=3.11
+  - pytorch=2.*
+  - pip
+  - pip:
+      - torch-geometric
+      - nilearn>=0.10
+      - nibabel
+      - scikit-learn>=1.4
+      - scipy
+      - numpy
+      - pandas
+      - neuroCombat
+      - networkx
+      - matplotlib
+      - seaborn
+      - hydra-core
+      - pytest
+      - ruff
+      - black
+      - jupyter

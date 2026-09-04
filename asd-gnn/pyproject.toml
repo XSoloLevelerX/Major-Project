@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "asdgnn"
+version = "0.1.0"
+description = "ASD classification from brain connectivity using graph neural networks (ABIDE-I)"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy",
+    "scipy",
+    "pandas",
+    "scikit-learn>=1.4",
+    "matplotlib",
+    "seaborn",
+    "networkx",
+    "nilearn>=0.10",
+    "nibabel",
+    "hydra-core",
+]
+
+[project.optional-dependencies]
+torch = ["torch", "torch-geometric"]
+harmonize = ["neuroCombat", "neuroHarmonize"]
+dev = ["pytest", "ruff", "black", "jupyter"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B"]
+ignore = [
+    "E501",  # line length is enforced by black, not twice
+    "B905",  # zip(strict=) — every zip here pairs sequences already known to align
+]
+
+[tool.black]
+line-length = 100
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+filterwarnings = ["ignore::DeprecationWarning", "ignore::FutureWarning"]
+markers = ["slow: long-running tests", "needs_data: requires downloaded ABIDE data"]

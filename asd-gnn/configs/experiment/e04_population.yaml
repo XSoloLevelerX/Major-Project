@@ -1,0 +1,9 @@
+# @package _global_
+# M11: population graph, with and without the site affinity term.
+hydra:
+  mode: MULTIRUN
+  sweeper:
+    params:
+      model: pop_cheb,pop_gcn
+      graph: population,population_nosite
+      protocol: kfold,loso

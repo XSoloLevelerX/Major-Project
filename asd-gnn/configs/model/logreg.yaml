@@ -1,0 +1,3 @@
+model: logreg
+C: 1.0
+select_k: 2000

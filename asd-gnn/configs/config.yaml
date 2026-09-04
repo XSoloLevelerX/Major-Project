@@ -1,0 +1,17 @@
+# Rule: an experiment is a config, never a code edit. If you are commenting out a line
+# to try something, that thing belongs in a config file.
+defaults:
+  - data: cc200
+  - conn: correlation
+  - graph: brain_topk
+  - model: gat
+  - harmonize: none
+  - protocol: kfold
+  - _self_
+
+seed: 0
+n_seeds: 5
+device: auto
+cache_dir: data/cache
+results_dir: results/runs
+sanity: false

@@ -1,0 +1,10 @@
+# @package _global_
+# M12: the full zoo. Queue it, do not watch it.
+hydra:
+  mode: MULTIRUN
+  sweeper:
+    params:
+      model: svm,ridge,rf,gcn,gat,gin,sage,cheb,mlp_graph,braincnn
+      data: cc200,aal,ho
+      conn: correlation,partial,tangent
+      protocol: kfold,loso

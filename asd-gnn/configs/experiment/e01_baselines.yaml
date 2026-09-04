@@ -1,0 +1,9 @@
+# @package _global_
+# M8: classical baselines under both protocols. Expect SVM ~65-70% k-fold, ~55-60% LOSO.
+hydra:
+  mode: MULTIRUN
+  sweeper:
+    params:
+      model: svm,ridge,rf,logreg
+      protocol: kfold,loso
+      conn: correlation,tangent

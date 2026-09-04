@@ -1,0 +1,9 @@
+# @package _global_
+# M10: first GNNs on individual brain graphs.
+hydra:
+  mode: MULTIRUN
+  sweeper:
+    params:
+      model: gcn,gat,mlp_graph
+      protocol: kfold
+      graph: brain_topk,brain_knn

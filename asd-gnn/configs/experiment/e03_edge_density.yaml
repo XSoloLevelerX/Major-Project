@@ -1,0 +1,9 @@
+# @package _global_
+# Density ablation. A dense graph makes message passing a global average.
+hydra:
+  mode: MULTIRUN
+  sweeper:
+    params:
+      model: gat
+      graph: brain_topk
+      edge_param: 0.02,0.05,0.10,0.20,0.50

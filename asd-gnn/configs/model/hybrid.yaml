@@ -1,0 +1,5 @@
+model: hybrid
+lambda_adv: 0.0
+emb_dim: 64
+encoder_cfg: {hidden: 64, n_layers: 2, conv: gat, heads: 4, pool: mean, dropout: 0.5}
+pop_cfg: {hidden: 64, n_layers: 2, conv: cheb, K: 3, dropout: 0.5}

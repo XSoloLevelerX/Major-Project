@@ -1,0 +1,7 @@
+atlas: cc200
+pipeline: cpac
+band_pass: true
+global_signal: false
+quality_checked: true
+min_timepoints: 100
+max_mean_fd: null
