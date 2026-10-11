@@ -1,0 +1,7 @@
+{
+  "n_subjects": 846,
+  "n_rois": 179,
+  "n_kfold_folds": 50,
+  "n_loso_folds": 19,
+  "max_site_proportion_drift": 0.0914885639295088
+}

@@ -1,4 +1,4 @@
-.PHONY: setup data features test leak sanity baselines graphs hybrid explain grid tables figures paper notebook smoke clean lint
+.PHONY: setup data features test leak sanity baselines baseline-report graphs hybrid explain grid tables figures paper notebook smoke clean lint
 
 PY ?= python
 
@@ -21,13 +21,20 @@ sanity:
 	$(PY) scripts/02_run_experiment.py --sanity
 	$(PY) scripts/02_run_experiment.py --gnn-sanity
 
-# M8 — classical baselines under both protocols.
+# M8 — classical baselines under both protocols (SVM + logistic regression are the
+# headline baselines; ridge and RF are extra reference points).
 baselines:
-	for m in svm ridge rf; do \
+	for m in svm logreg ridge rf; do \
 	  for p in kfold loso; do \
 	    $(PY) scripts/02_run_experiment.py --model $$m --protocol $$p; \
 	  done; \
 	done
+
+# M8 presentation: figures for the slides + the live-demo notebook (run after baselines).
+baseline-report: tables
+	$(PY) scripts/07_baseline_figures.py
+	$(PY) notebooks/build_baseline_notebook.py
+	$(PY) -m jupyter nbconvert --to notebook --execute --inplace notebooks/baselines.ipynb
 
 # M10 — first GNNs on individual brain graphs.
 graphs:

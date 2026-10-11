@@ -18,6 +18,7 @@ dependencies = [
     "nilearn>=0.10",
     "nibabel",
     "hydra-core",
+    "tabulate",
 ]
 
 [project.optional-dependencies]

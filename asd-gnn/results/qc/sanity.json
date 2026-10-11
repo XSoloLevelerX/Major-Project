@@ -1,0 +1,26 @@
+{
+  "label_shuffle": {
+    "bal_acc": 0.5046274844079913,
+    "expected": "~0.50",
+    "n_splits": 5,
+    "pass": true
+  },
+  "real_labels": {
+    "bal_acc": 0.6665553855427273,
+    "margin_over_shuffle": 0.16192790113473599,
+    "note": "real labels beat shuffled, as expected"
+  },
+  "sex_control": {
+    "bal_acc": 0.5884189298279698,
+    "note": "features should carry SOME real signal; chance here means a broken pipeline"
+  },
+  "site_control": {
+    "bal_acc": 0.6383944309533932,
+    "note": "quantifies the site confound \u2014 cite this number in the Discussion"
+  },
+  "connectivity_fit_size": {
+    "n_fit_samples": 676,
+    "n_total": 846,
+    "pass": true
+  }
+}

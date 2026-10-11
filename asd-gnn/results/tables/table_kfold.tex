@@ -1,0 +1,14 @@
+\begin{table}
+\caption{Results under kfold}
+\label{tab:kfold}
+\begin{tabular}{llllllllll}
+\toprule
+model & conn & atlas & harmonize & unseen\_site & bal\_acc & acc & auc & sens & spec \\
+\midrule
+logreg & correlation & cc200 & none & passthrough & 0.647 ± 0.044 & 0.649 ± 0.044 & 0.699 ± 0.045 & 0.616 ± 0.066 & 0.678 ± 0.061 \\
+rf & correlation & cc200 & none & passthrough & 0.639 ± 0.052 & 0.648 ± 0.050 & 0.699 ± 0.053 & 0.513 ± 0.086 & 0.764 ± 0.060 \\
+svm & correlation & cc200 & none & passthrough & 0.635 ± 0.047 & 0.637 ± 0.046 & 0.686 ± 0.046 & 0.608 ± 0.079 & 0.662 ± 0.060 \\
+ridge & correlation & cc200 & none & passthrough & 0.608 ± 0.051 & 0.611 ± 0.051 & 0.651 ± 0.051 & 0.578 ± 0.072 & 0.639 ± 0.080 \\
+\bottomrule
+\end{tabular}
+\end{table}
